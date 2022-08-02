@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="pseudo-body">
+      <!-- Nav -->
+      <nav id="navbar" class="nav">
+        <ul class="nav__list">
+          <li>
+            <a class="nav__link nav__link--active" href="#welcome-section"
+              >About</a
+            >
+          </li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Welcome/about section -->
+      <section class="section section__about" id="welcome-section">
+        <div class="moon"></div>
+        <div class="presentation">
+          <i class="greeting">console.log("Hello world!");</i>
+          <h1 class="text-big">I am Miguel Echeverri</h1>
+          <i class="role">&lt; A web developer /&gt;</i>
+        </div>
+        <div class="cloud cloud--left"></div>
+        <div class="cloud cloud--right"></div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section section--projects" id="projects">
+        <div class="about-projects">
+          <h2 class="text-medium about-projects__title">
+            These are some of my projects
+          </h2>
+          <p>
+            Take a look at a selection of great projects that I have worked on
+            so far. If you want to see more, feel free to...
+          </p>
+          <a href="#contact" class="about-projects__link">Contact me</a>
+        </div>
+
+        <div class="project-cards">
+          <a
+            style="background-color: #1e1f1e"
+            href="https://magiudev-personal-projects.github.io/babel-docs-clone"
+            target="_blank"
+            class="project-card"
+          >
+            <p>A clone of</p>
+            <img
+              class="project-card__logo"
+              src="https://d33wubrfki0l68.cloudfront.net/7a197cfe44548cc1a3f581152af70a3051e11671/78df8/img/babel.svg"
+              alt="babeljs logo"
+            />
+            <p>Docs built with HTML, CSS and JS</p>
+          </a>
+          <a
+            style="background-color: #172b4b"
+            href="https://magiudev-personal-projects.github.io/calculator/"
+            target="_blank"
+            class="project-card"
+          >
+            <p>A calculator</p>
+            <img
+              class="project-card__logo"
+              src="https://cdn-icons-png.flaticon.com/512/2374/2374370.png"
+              alt="Small calculator"
+            />
+            <p>
+              Built with Typescript, SASS, React and Clean Architecture
+              Principles
+            </p>
+          </a>
+          <a
+            style="background-color: #210303"
+            href="https://benevolent-pithivier-91fd85.netlify.app/"
+            target="_blank"
+            class="project-card"
+          >
+            <p>A Full Stack eCommerce page</p>
+            <img
+              class="project-card__logo"
+              src="https://cdn-icons-png.flaticon.com/512/4290/4290854.png"
+              alt="Shopping cart"
+            />
+            <p>Built with Stripe, React, Redux and Express</p>
+            <p>(Not Finished Yet)</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section section__contact" id="contact">
+        <div class="astronaut"></div>
+        <div class="contact-info">
+          <h2 class="text-big">Let's reach the moon together</h2>
+          <span><i>Contact me on:</i></span>
+
+          <ul class="contact__links">
+            <li>
+              <a
+                class="contact__link"
+                href="https://wa.me/35699783123?text=Hi!%20I%20am%20interested%20in%20your%20dev%20services"
+                target="_blank"
+              >
+                <img
+                  class="contact__link-logo"
+                  src="https://static.whatsapp.net/rsrc.php/yz/r/lOol7j-zq4u.svg"
+                  alt="whatsapp logo"
+                />Whatsapp
+              </a>
+            </li>
+            <li>
+              <a
+                class="contact__link"
+                href="https://www.linkedin.com/in/miguel-angel-echeverri-quiroz-5a7b63223/"
+                target="_blank"
+              >
+                <img
+                  class="contact__link-logo"
+                  src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
+                  alt="Linkedin logo"
+                />LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- -->
+
+      <!-- Footer -->
+      <footer class="footer">
+        Developed by Miguel Angel Echeverri Quiroz. ©2022. All rights reserved.
+      </footer>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

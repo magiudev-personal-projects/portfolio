@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+  
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+} 
+  
+:root {
+    --text-dark: 10, 10, 10;
+    --text-light: 255, 255, 255;
+    --gray: 244, 244, 244;
+    --green: 40, 40, 20;
+    --green-solid: 70, 70, 60;
+    --purple: 138, 139, 184;
+}
+  
+.pseudo-body {
+    font-size: 1.6rem;
+    color: rgb(var(--text-dark));
+    background-color: rgb(var(--gray));
+    text-align: center;
+}
+  
+.nav {
+    width: 100%;
+    background: rgba(var(--green), .7);
+    position: fixed;
+    z-index: 10;
+}
+  
+.nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.nav__link {
+    display: block;
+    color: rgba(var(--text-light), 0.8);
+    padding: 2rem 1.5rem;
+}
+  
+.nav__link:hover {
+    color: rgba(var(--text-light), 1);
+}
+  
+.nav__link--active {
+    background: rgb(var(--green));
+    font-weight: bold;
+    color: rgba(var(--text-light), 1);
+}
+  
+.section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden; 
+}
+  
+.cloud {
+    width: 200vmax;
+    height: 129vmax; /* Established acording the witdh/heitgh ratio of the original image */
+    background-image: url("https://i.postimg.cc/J0H94XDN/output-onlinepngtools.png"); /* taken from https://www.freepng.es/ */
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.7;
+}
+  
+.cloud--left {
+    left: 0;
+    transform: translate(-50%, 50%);
+    transition: transform .1s;
+}
+  
+.cloud--right {
+    right: 0;
+    transform: translate(50%, 50%);
+    transition: transform .1s;
+}
+  
+.presentation {
+    position: absolute;
+    max-width: 300px;
+    height: 100vh;
+    transition: transform .1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+  
+.greeting {
+    align-self: flex-start;
+}
+  
+.role {
+    align-self: flex-end;
+}
+  
+.text-big {
+    font-size: 5rem;
+    font-weight: bold;
+}
+  
+.text-medium {
+    font-size: 4rem;
+    font-weight: normal;
+}
+  
+  
+.moon {
+    height: 90vh;
+    width: 135vh; /* Established acording the width/heitgh ratio of the original image */
+    position: absolute;
+    opacity: .65;
+    position: absolute;
+    background-image: url("https://i.postimg.cc/TPfnkrMG/output-onlinepngtools.png"); /* taken from https://www.freepng.es/ */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(.5);
+    transition: transform .1s;
+}
+  
+.section--projects {
+    background-color: rgb(var(--green-solid));
+}
+  
+.about-projects {
+    color: rgb(var(--text-light));
+    font-size: 2rem;
+    max-width: 400px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 100px 20px rgba(0, 0, 0, 0.2);
+}
+  
+.about-projects__title {
+    text-align: left;
+}
+  
+.about-projects__link,
+.contact__link {
+    min-width: 15rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-radius: 5px;
+    color: rgb(var(--text-dark));
+    gap: 1em;
+    
+    background: linear-gradient(to right, rgb(var(--purple)) 50%, white 50%);
+    background-size: 250% 100%;
+    background-position: right bottom;
+    transition: all .4s ease-in-out;
+}
+  
+.about-projects__link:hover,
+.contact__link:hover {
+    background-position: left bottom;
+    color: rgb(var(--text-light))
+}
+  
+.about-projects__link {
+    align-self: flex-end;
+}
+
+.project-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.project-card {
+    border: none;
+    width: 100%;
+    min-height: 300px;
+    max-height: 700px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+    color: white;
+    padding: 1.5rem;
+    gap: 2rem;
+}
+
+.project-card__logo {
+    object-fit: contain;
+    width: 20rem;
+}
+
+.project-card:hover::after {
+    content: "View Project";
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(255, 255, 255, .9);
+    color: black;
+    font-size: 1.6rem;
+    animation: boing .4s ease-in-out;
+}
+
+.contact-info {
+    font-size: 2rem;
+    z-index: 5;
+}
+  
+.contact__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+  
+.contact__link-logo {
+    width: 4rem;
+}
+  
+.astronaut {
+    height: 100vh; 
+    width: 105vh; /* Established acording the witdh/heitgh ratio of the original image */
+    background-image:url("https://i.postimg.cc/pXXsZzXq/astro.png"); /* taken from https://www.freepng.es/ */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    opacity: 0.6;
+    transform: translateY(-100%);
+    transition: transform 1.5s ease-out; /*cubic-bezier(.16,.46,.24,.67);*/
+}
+  
+.footer {
+    text-align: center;
+    background-color: rgba(var(--green-solid));
+    color: rgb(var(--text-light));
+    padding: 2rem;
+}
+  
+@media (min-width: 700px) {    
+    .section {
+        padding: 20px;
+    }
+    
+    .project-cards {
+        flex-direction: row;
+    }
+
+    .contact__links {
+        flex-direction: row;
+    }
+}
+  
+@keyframes boing {
+    0% {
+        transform: scale(50%)
+    }
+    50% {
+        transform: scale(150%);
+    }
+    75% {
+        transform: scale(90%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
